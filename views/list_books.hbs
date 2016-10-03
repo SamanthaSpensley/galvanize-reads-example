@@ -1,0 +1,15 @@
+<div class="container books">
+  <h2>Books</h2>
+    {{#each book}}
+    <div class="row displayResults">
+      <div class="col-xs-4">
+        <img src="{{cover}}" alt="{{title}}" class="bookCover" />
+      </div>
+      <div class="BookDetails col-xs-8">
+        <h3>{{title}}</h3>
+        <span class="genre">{{genre}}</span>
+        <p>{{description}}</p>
+      </div>
+    </div>
+    {{/each}}
+</div>

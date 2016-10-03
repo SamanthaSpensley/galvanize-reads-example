@@ -1,8 +1,21 @@
-body {
+/*body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
   color: #00B7FF;
+}*/
+/*INDEX Page*/
+img {
+  max-width: 100%;
+}
+
+
+/*BOOKS Page*/
+.displayResults {
+  margin-bottom: 2vw;
+}
+.bookCover {
+  max-width: 100%;
 }
