@@ -21,9 +21,19 @@ function DeleteBook(id) {
   return knex('book').where('id', id).del()
 }
 
+function EditBook(id, title, genre, description, cover) {
+  return knex('book').where('id', id).update({
+    title:title,
+    genre:genre,
+    description:description,
+    cover:cover,
+  })
+}
+
 module.exports = {
   getAllBooks: Books,
   getBookById: GetBookById,
   addBook: AddBook,
   deleteBook: DeleteBook,
+  editBook: EditBook,
 }

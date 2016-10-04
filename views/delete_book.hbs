@@ -1,6 +1,6 @@
 <div class="container books">
-  <form class="form-horizontal col-sm-8 col-sm-offset-2" action="/books/{{book.id}}?_method=DELETE">
-    <div class="row displayResults">
+  <div class="row displayResults">
+    <form class="form-horizontal col-sm-8 col-sm-offset-2" action="/books/{{book.id}}?_method=DELETE" method="POST">
       <div class="col-xs-4">
         <img src="{{book.cover}}" alt="{{book.title}}" class="bookCover" />
       </div>
@@ -15,6 +15,6 @@
           <button type="submit" class="btn btn-primary">Delete {{book.title}}?</button>
         </div>
       </div>
-    </div>
-  </form>
+    </form>
+  </div>
 </div>

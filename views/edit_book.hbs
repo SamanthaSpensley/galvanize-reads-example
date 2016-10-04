@@ -1,0 +1,40 @@
+<div class="container">
+  <form class="form-horizontal col-sm-8 col-sm-offset-2" action="/books/{{book.id}}?_method=PUT" method="POST">
+    <fieldset>
+      <legend>Edit {{book.title}}</legend>
+      <div class="form-group">
+        <label for="title" class="col-lg-2 control-label">Title</label>
+        <div class="col-lg-10">
+          <input type="text" class="form-control" name="title" id="title" value="{{book.title}}">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="genre" class="col-lg-2 control-label">Genre</label>
+        <div class="col-lg-10">
+          <input type="text" class="form-control" name="genre" id="genre" value="{{book.genre}}">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="cover" class="col-lg-2 control-label">Cover Image URL</label>
+        <div class="col-lg-10">
+          <input type="text" class="form-control" name="cover" id="cover" value="{{book.cover}}">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="description" class="col-lg-2 control-label">Description:</label>
+        <div class="col-lg-10">
+          <textarea class="form-control" rows="5" name="description">{{book.description}}</textarea>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-lg-10 col-lg-offset-2">
+          <button type="submit" class="btn btn-primary">Edit {{book.title}}</button>
+        </div>
+      </div>
+    </fieldset>
+  </form>
+</div>

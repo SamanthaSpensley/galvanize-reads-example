@@ -40,6 +40,21 @@ router.delete('/:id', (req, res, next) => {
   })
 })
 
+router.get('/edit/:id', (req, res, next) => {
+  query.getBookById(req.params.id)
+  .then((book) => {
+    res.render('edit_book', {
+      book:book[0]
+    })
+  })
+})
+
+router.put('/:id', (req, res, next) => {
+  query.editBook(req.params.id, req.body.title, req.body.genre, req.body.description, req.body.cover)
+  .then(() => {
+    res.redirect('/books')
+  })
+})
 
 
 module.exports = router;
