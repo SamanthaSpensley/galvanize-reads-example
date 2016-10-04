@@ -13,6 +13,16 @@ router.get('/', (req, res, next) => {
   })
 });
 
+router.get('/:id', (req, res, next) => {
+  query.getBookById(req.params.id)
+  .then((book) => {
+    console.log(book);
+    res.render('list_books', {
+      book:book
+    })
+  })
+})
+
 router.get('/new', (req, res, next) => {
   res.render('add_book')
 });
