@@ -24,4 +24,22 @@ router.post('/', (req, res, next) => {
   })
 })
 
+router.get('/delete/:id', (req, res, next) => {
+  query.getBookById(req.params.id)
+  .then((book) =>{
+    res.render('delete_book', {
+      book:book[0]
+    });
+  })
+})
+
+router.delete('/:id', (req, res, next) => {
+  query.deleteBook(req.params.id)
+  .then(() => {
+    res.redirect('/books')
+  })
+})
+
+
+
 module.exports = router;

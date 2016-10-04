@@ -4,6 +4,10 @@ function Books() {
   return knex('book');
 }
 
+function GetBookById(id) {
+  return knex('book').where('id', id)
+}
+
 function AddBook(title, genre, description, cover) {
   return knex('book').insert({
     title:title,
@@ -13,7 +17,13 @@ function AddBook(title, genre, description, cover) {
   })
 }
 
+function DeleteBook(id) {
+  return knex('book').where('id', id).del()
+}
+
 module.exports = {
   getAllBooks: Books,
+  getBookById: GetBookById,
   addBook: AddBook,
+  deleteBook: DeleteBook,
 }

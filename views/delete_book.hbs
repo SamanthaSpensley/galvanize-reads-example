@@ -1,0 +1,20 @@
+<div class="container books">
+  <form class="form-horizontal col-sm-8 col-sm-offset-2" action="/books/{{book.id}}?_method=DELETE">
+    <div class="row displayResults">
+      <div class="col-xs-4">
+        <img src="{{book.cover}}" alt="{{book.title}}" class="bookCover" />
+      </div>
+      <div class="BookDetails col-xs-8">
+        <h3>{{book.title}}</h3>
+        <span class="genre">{{book.genre}}</span>
+        <p>{{book.description}}</p>
+      </div>
+
+      <div class="form-group">
+        <div class="col-lg-10 col-lg-offset-2">
+          <button type="submit" class="btn btn-primary">Delete {{book.title}}?</button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
